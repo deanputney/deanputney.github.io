@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stardate Alpha Test Invitation</title>
+    <style>
+      body {
+        background-color: #121212; /* Dark grey/black background */
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+      }
+      .video-responsive {
+        overflow: hidden;
+        padding-bottom: 71.1%; /* 16:9 aspect ratio for portrait (9/16 * 100) */
+        position: relative;
+        height: 0;
+        max-width: 40%;
+        display: block; /* Change to block */
+        margin: 0 auto; /* Center the video */
+      }
+      .video-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+      @media (max-width: 600px) {
+        .container {
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>You're invited to alpha test ✨Stardate!✨</h1>
+      <p>
+        Stardate is the fastest way to take a note. Just talk to your Apple
+        Watch.
+      </p>
+      <div class="video-responsive">
+        <!-- Embedding the YouTube video -->
+        <iframe
+          src="https://www.youtube.com/embed/R3A2zsmxdfc"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <a href="https://testflight.apple.com/join/J4Ssh33V">
+        <img
+          src="assets/testflight-128x128_27.png"
+          alt="Testflight Icon"
+          style="width: 100px; margin-top: 20px"
+        />
+      </a>
+      <p>Tap the TestFlight icon to join the Stardate Alpha Test.</p>
+      <!-- Assuming the app icon file is named "stardate-icon.png" in the assets folder -->
+      <img
+        src="assets/stardate-icon.png"
+        alt="Stardate Icon"
+        style="width: 100px; margin-top: 20px"
+      />
+    </div>
+  </body>
+</html>
