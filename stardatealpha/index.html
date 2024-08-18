@@ -25,6 +25,12 @@
         display: block; /* Change to block */
         margin: 0 auto; /* Center the video */
       }
+      @media (max-width: 600px) {
+        .video-responsive {
+          max-width: 100%; /* Full width on mobile */
+          padding-bottom: 177.7%; /* 16:9 aspect ratio for portrait (9/16 * 100) */
+        }
+      }
       .video-responsive iframe {
         left: 0;
         top: 0;
