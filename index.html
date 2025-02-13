@@ -1,43 +1,100 @@
 <html>
-	<head>
-		<style type="text/css">
-			#main {
-				width: 80%;
-				max-width: 500px;
-				margin: 50px auto;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="main">
-			<h1>Hi, I'm Dean.</h1>
+  <head>
+    <style type="text/css">
+      #main {
+        /* width: 80%; */
+        max-width: 35rem;
+        margin: 50px auto;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        line-height: 1.6em;
+      }
 
-			<p>I live in Seattle. I'm a good friend. Let's hang out maybe. :)</p>
+      h1,
+      h2,
+      h3 {
+        /* border-bottom: 3px solid #eb0; */
+        padding: 0.4em 0;
+      }
 
-			<p>Sometimes you just gotta make a website and not worry about it too much.</p>
+      h1 {
+        border-bottom: 3px solid #eb0;
+      }
 
-			<h2>Here are a few things I made and am proud of</h2>
-			<ul>
-				<li>
-					<a href="https://glowforge.com/">Glowforge</a>
-					<ul>
-						<li>Check out our <a href="https://glowforge.com/aura/main">newest laser</a>! Launched in July 2023.</li>
-					</ul>
-				</li>
-				<li><a href="https://walterkoessler.com/">Walter Koessler 1914-1918</a></li>
-				<li><a href="https://boingboing.net/2017/06/29/skies-a-zine-of-landscapes-sh.html">Skies: Ten Years of Window Seat Views</a></li>
-				<li>Concert visuals with <a href="https://github.com/ControllingTransmission">Controlling Transmission</a></li>
-			</ul>
+      a {
+        color: #333;
+        text-decoration: underline 3px #eb0;
+      }
 
-			<h2>I'm learning to</h2>
+      a:hover {
+        font-style: italic;
+      }
 
-			<ul>
-				<li>Sail. I have my ASA 103, 104, and 114 certifications. I'd like to sail with you!</li>
-				<li>Sew. I made this shirt for Kermit! (photo coming soon)</li>
-				<li></li>
-			</ul>
-		</div>
-	</body>
+      a:visited {
+        text-decoration: underline 3px #0be;
+        font-style: italic;
+      }
+
+      @media (max-width: 37rem) {
+        #main {
+          max-width: 50rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Hi, I'm Dean</h1>
+
+      <p>I live in Seattle. Let's hang out maybe. :)</p>
+
+      <p>
+        Sometimes you just gotta make a website and not worry about it too much.
+      </p>
+
+      <h2>Here are a few things I made and am proud of</h2>
+      <ul>
+        <li>
+          <a href="https://glowforge.com/">Glowforge</a>
+          <ul>
+            <li>
+              Check out our
+              <a href="https://glowforge.com/aura/main">newest laser</a>!
+              Launched in July 2023.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://walterkoessler.com/">Walter Koessler 1914-1918</a>
+        </li>
+        <li>
+          <a
+            href="https://boingboing.net/2017/06/29/skies-a-zine-of-landscapes-sh.html"
+            >Skies: Ten Years of Window Seat Views</a
+          >
+        </li>
+        <li>
+          Concert visuals as art group
+          <a href="https://github.com/ControllingTransmission"
+            >Controlling Transmission</a
+          >
+        </li>
+      </ul>
+
+      <h2>I'm learning to</h2>
+
+      <ul>
+        <li>
+          Sail. I have my ASA 103, 104, and 114 certifications. Let's go
+          sailing!
+        </li>
+        <li>Sew. I made a puppet of myself! (photo coming soon)</li>
+        <li>
+          Make iOS apps. Check out my first one,
+          <a href="https://stardateapp.com">Stardate</a>.
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
-
-
