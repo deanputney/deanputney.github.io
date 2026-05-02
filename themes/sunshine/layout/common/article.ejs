@@ -1,0 +1,45 @@
+<article class="article" itemscope itemprop="blogPost">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name">
+            <% if (index) { %>
+                <a href="<%- url_for(post.link ? post.link : post.path) %>" itemprop="url"><%= post.title %></a>
+            <% } else { %>
+                <%= post.title %>
+            <% } %>
+        </h1>
+        <time class="post-date" datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
+            <%= format_date_full(post.date) %>
+        </time>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <p class="read-more">
+            <a href="<%- url_for(post.path) %>#more"><%= __('article.read_more') %></a>
+        </p>
+    <% } else { %>
+        <%- post.content %>
+    <% } %>
+    </div>
+    <% if (!index && post.tags && post.tags.length){ %>
+    <div class="post-tags">
+    <% (post._tags || post.tags).forEach(tag => { %>
+        <a class="tag" href="<%- url_for(tag.path) %>">#<%= tag.name %></a>
+    <% }) %>
+    </div>
+    <% } %>
+    <% if (!index && (post.prev || post.next)) { %>
+    <nav class="post-nav">
+        <span class="post-nav-prev">
+            <% if (post.prev){ %>
+            <a href="<%- url_for(post.prev.path) %>">&larr; <%= post.prev.title %></a>
+            <% } %>
+        </span>
+        <span class="post-nav-next">
+            <% if (post.next){ %>
+            <a href="<%- url_for(post.next.path) %>"><%= post.next.title %> &rarr;</a>
+            <% } %>
+        </span>
+    </nav>
+    <% } %>
+</article>

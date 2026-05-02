@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- partial('common/head') %>
+</head>
+<body>
+    <% if (page.layout !== 'home') { %>
+    <%- partial('common/navbar', { page }) %>
+    <% } %>
+    <%- body %>
+    <%- partial('common/footer') %>
+    <%- partial('common/scripts') %>
+</body>
+</html>

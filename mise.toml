@@ -1,0 +1,30 @@
+[tools]
+node = "22"
+
+[tasks.dev]
+description = "Start the Hexo development server with live reload"
+run = "npx hexo server"
+
+[tasks.dev-static]
+description = "Build, watch for changes, and serve the static output"
+run = "npx hexo generate --watch & npx http-server public -p 4000 -c-1"
+
+[tasks.build]
+description = "Generate static site files"
+run = "npx hexo generate"
+
+[tasks.clean]
+description = "Clean generated files and cache"
+run = "npx hexo clean"
+
+[tasks.deploy]
+description = "Deploy the site"
+run = "npx hexo deploy"
+
+[tasks.new]
+description = "Create a new blog post (usage: mise run new 'Post Title')"
+run = "npx hexo new \"$1\""
+
+[tasks.install]
+description = "Install npm dependencies"
+run = "npm install"

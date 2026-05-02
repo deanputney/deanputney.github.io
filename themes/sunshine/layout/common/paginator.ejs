@@ -1,0 +1,11 @@
+<% function link_url(i) {
+    return url_for(i === 1 ? page.base : page.base + get_config('pagination_dir') + '/' + i + '/');
+} %>
+<nav class="pagination" role="navigation" aria-label="pagination">
+    <% if (page.current > 1) { %>
+    <a class="pagination-prev" href="<%= link_url(page.current - 1) %>">&larr; <%= __('nav.prev') %></a>
+    <% } %>
+    <% if (page.current < page.total) { %>
+    <a class="pagination-next" href="<%= link_url(page.current + 1) %>"><%= __('nav.next') %> &rarr;</a>
+    <% } %>
+</nav>
